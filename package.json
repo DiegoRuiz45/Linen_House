@@ -1,0 +1,16 @@
+{
+  "name": "linen-house",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:admin": "npm --prefix frontend run dev:admin",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:admin": "npm --prefix frontend run build:admin",
+    "lint:frontend": "npm --prefix frontend run lint",
+    "dev:backend": "cd backend && .venv\\Scripts\\python.exe -m uvicorn app.main:app --reload",
+    "migrate:backend": "cd backend && .venv\\Scripts\\python.exe -m alembic upgrade head",
+    "check:backend": "cd backend && .venv\\Scripts\\python.exe -m compileall -q app migrations",
+    "test:backend": "cd backend && .venv\\Scripts\\python.exe -m unittest discover -s tests -v"
+  }
+}

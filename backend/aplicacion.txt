@@ -1,0 +1,25 @@
+iniciar aplicacion 
+uvicorn app.main:app --reload
+
+Actualizar archivo requirements.txt
+pip freeze > requirements.txt
+
+Opcional) Eliminar Migracion
+Remove-Item migrations -Recurse -Force
+
+1) Validar antes de la migracion 
+python -c "from app.db.base import Base; print(Base.metadata.tables.keys())"
+Debe mostrar algo parecido a:
+
+dict_keys(['users'])
+
+2) Migracion en la aplicacion 
+alembic revision --autogenerate -m "create users table"
+Alembic debería mostrar algo similar a:
+
+Detected added table 'users'
+Detected added index ...
+Generating migrations\versions\xxxxx_create_users_table.py
+
+3) Crear migracion BD
+alembic init migrations

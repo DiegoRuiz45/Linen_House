@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+
+/* ==========================================
+   PLAYFAIR DISPLAY
+========================================== */
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./assets/fonts/Playfair/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer components {
+
+  .catalog-price-range {
+    height: 4px;
+    appearance: none;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-coffee) 16%, transparent);
+  }
+
+  .catalog-price-range::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    border: 3px solid var(--color-linen-soft);
+    border-radius: 999px;
+    background: var(--color-terracotta);
+    box-shadow: 0 3px 10px color-mix(in srgb, var(--color-charcoal) 18%, transparent);
+  }
+
+  .catalog-price-range::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--color-linen-soft);
+    border-radius: 999px;
+    background: var(--color-terracotta);
+    box-shadow: 0 3px 10px color-mix(in srgb, var(--color-charcoal) 18%, transparent);
+  }
+
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./assets/fonts/Playfair/PlayfairDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./assets/fonts/Playfair/PlayfairDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ==========================================
+   INTER
+========================================== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter_18pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts//Inter/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+
+  /* Fondos */
+
+  --color-linen: #f5f1e8;
+
+  --color-linen-header: #f7f4ef;
+
+  --color-linen-soft: #faf7f1;
+
+  --color-linen-dark: #e8e2d4;
+
+
+  /* Texto */
+
+  --color-charcoal: #29241f;
+
+  --color-coffee: #574c43;
+
+
+  /* Marca */
+
+  --color-terracotta: #ad6048;
+
+  --color-terracotta-dark: #914a36;
+
+
+  /* Fonts */
+
+  --font-display: "Playfair Display", serif;
+
+  --font-body: "Inter", sans-serif;
+}
+
+
+
+/* ======================================================
+   GLOBAL
+====================================================== */
+
+@layer base {
+
+html,
+body,
+#root {
+
+  width: 100%;
+
+  min-width: 100%;
+
+  min-height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  min-width: 320px;
+
+  min-height: 100vh;
+
+  background-color: #f5f1e8;
+
+  color: #29241f;
+
+  font-family: "Inter", sans-serif;
+
+  overflow-x: hidden;
+
+}
+
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+
+button {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  font: inherit;
+
+  color: inherit;
+
+  cursor: pointer;
+
+}
+
+
+button,
+a {
+
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+}
